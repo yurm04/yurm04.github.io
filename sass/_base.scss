@@ -1,0 +1,54 @@
+html,
+body {
+	color: $color--mine-shaft;
+	margin: 0;
+}
+
+.container {
+	padding: 0 10px;
+}
+
+.personal-info {
+	background-color: $color--white;
+
+}
+
+.name {
+	font-family: Dosis, 'Helvetica Neueu', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	letter-spacing: 1.2px;
+}
+
+h2 {
+	font-family: Oswald, 'Helvetica Neueu', Helvetica, Arial, sans-serif;
+}
+
+h3, p, a {
+	font-family: 'Open Sans', 'Helvetica Neueu', Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: $color--danube;
+	text-decoration: none;
+	transition: text-decoration .2s,
+				color .2s;
+
+	&:hover {
+		color: darken($color--danube, 10%);
+		text-decoration: underline;
+	}
+
+}
+
+.row {
+	h3, p {
+		display: inline-block;
+	}
+}
+
+.contact,
+.profiles {
+	h3 {
+		min-width: 100px;
+	}
+}

@@ -1,0 +1,38 @@
+html,
+body {
+  color: #222222;
+  margin: 0; }
+
+.container {
+  padding: 0 10px; }
+
+.personal-info {
+  background-color: #FEFEFE; }
+
+.name {
+  font-family: Dosis, 'Helvetica Neueu', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 1.2px; }
+
+h2 {
+  font-family: Oswald, 'Helvetica Neueu', Helvetica, Arial, sans-serif; }
+
+h3, p, a {
+  font-family: 'Open Sans', 'Helvetica Neueu', Helvetica, Arial, sans-serif; }
+
+a {
+  color: #6680D4;
+  text-decoration: none;
+  transition: text-decoration .2s, color .2s; }
+  a:hover {
+    color: #3e5fc9;
+    text-decoration: underline; }
+
+.row h3, .row p {
+  display: inline-block; }
+
+.contact h3,
+.profiles h3 {
+  min-width: 100px; }
+
+/*# sourceMappingURL=style.css.map */
