@@ -1,3 +1,15 @@
 // Responsive breakpoints
 $tablet-break: 768px;
 $desktop-break: 1024px;
+
+@mixin medium {
+	@media only screen and (min-width: $tablet-break) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media only screen and (min-width: $desktop-break) {
+		@content;
+	}
+}

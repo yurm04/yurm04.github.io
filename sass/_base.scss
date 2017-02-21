@@ -1,16 +1,65 @@
 html,
-body {
+body,
+h1, h2, h3, h4, h5, h6, p {
 	color: $color--mine-shaft;
 	margin: 0;
 }
 
-.container {
-	padding: 0 10px;
+h3, p {
+	font-weight: normal;
 }
 
 .personal-info {
 	background-color: $color--white;
 
+	h3 {
+		display: inline-block;
+	}
+}
+
+.personal-info,
+.main-content {
+	padding: 3.5em 2em;
+
+	h2 {
+		margin-bottom: 1.3em;
+		color: $color--kournikova;
+	}
+}
+
+.personal-info {
+
+	div:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.main-content {
+	background-color: $color--tuna;
+	padding-bottom: 6em;
+
+	section:not(:last-child) {
+		margin-bottom: 2em;
+	}
+
+	h3, p {
+		color: $color--white;
+	}
+}
+
+.contact,
+.profiles {
+	margin: 0 auto 4em;
+
+	.row {
+		margin-bottom: .7em;
+	}
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 1.5em;
+	font-size: 2.3em;
 }
 
 .name {
@@ -19,36 +68,233 @@ body {
 	letter-spacing: 1.2px;
 }
 
+
 h2 {
 	font-family: Oswald, 'Helvetica Neueu', Helvetica, Arial, sans-serif;
 }
 
-h3, p, a {
+h3, p, a, footer {
 	font-family: 'Open Sans', 'Helvetica Neueu', Helvetica, Arial, sans-serif;
+	font-size: 14px;
 }
 
 a {
-	color: $color--danube;
 	text-decoration: none;
 	transition: text-decoration .2s,
 				color .2s;
+	.personal-info & {
+		color: $color--danube;
+	}
+
+	footer & {
+		color: $color--amaranth;
+	}
 
 	&:hover {
-		color: darken($color--danube, 10%);
 		text-decoration: underline;
+		cursor: pointer;
+
+		.personal-info & {
+			color: darken($color--danube, 10%);
+		}
+
+		footer & {
+			color: darken($color--amaranth, 10%);
+		}
 	}
 
 }
 
 .row {
+	h3 {
+		margin-bottom: 1em;
+	}
+}
+
+.contact {
 	h3, p {
 		display: inline-block;
 	}
 }
 
+.experience {
+	.duration,
+	.title,
+	p {
+		font-weight: normal;
+	}
+}
+
+
 .contact,
 .profiles {
+	width: 230px;
+
 	h3 {
 		min-width: 100px;
 	}
 }
+
+.experience {
+	.item:not(:last-child) {
+		margin-bottom: 2.5em;
+	}
+}
+
+.company,
+.degree,
+.row h3,
+.contribution h3 {
+	font-weight: 700;
+}
+
+.school {
+	&:not(:last-child) {
+		margin-bottom: 2.3em;
+	}
+
+	h3 {
+		margin-bottom: .6em;
+	}
+}
+
+.delim {
+	margin-right: .5em;
+	margin-left: .5em;
+}
+
+.duration,
+.concentration {
+	font-style: italic;
+}
+
+.skill:not(:last-child) {
+	margin-bottom: 1em;
+}
+
+.contribution {
+	&:not(:last-child) {
+		margin-bottom: 1.8em;
+	}
+
+	h3 {
+		margin-bottom: 1em;
+	}
+}
+
+.duration,
+.experience p,
+.insitution,
+.contribution p {
+	color: $color--alto;
+}
+
+body {
+	background-color: $color--tuna;
+}
+
+footer {
+	background-color: $color--jordy-blue;
+	padding: .8em;
+	font-size: .7em;
+	text-align: center;
+}
+
+@include medium {
+	.personal-info,
+	.main-content {
+		padding-left: 5.5em;
+		padding-right: 5.5em;
+	}
+
+	.contact,
+	.profiles {
+		display: inline-block;
+	}
+
+	.profiles {
+		float: right;
+	}
+}
+
+@include large {
+	.container {
+		display: flex;
+	}
+	.personal-info,
+	.main-content {
+		padding-left: 3em;
+		padding-right: 3em;
+	}
+
+
+	h1 {
+		margin-bottom: 2.5em;
+	}
+
+	.contact,
+	.profiles {
+		display: block;
+		margin-bottom: 10em;
+	}
+
+	.item {
+		.row {
+			h3,
+			p {
+				display: inline-block;
+			}
+
+			.company,
+			.duration {
+				min-width: 30%;
+			}
+
+			.title {
+				font-weight: 600;
+			}
+
+			.duration {
+				vertical-align: top;
+			}
+
+			p {
+				max-width: 69%;
+			}
+		}
+	}
+
+	.school,
+	.skills,
+	.contributions {
+		vertical-align: top;
+		display: inline-block;
+	}
+
+	.school {
+		&:first-of-type {
+			min-width: 50%;
+			max-width: 50%
+		}
+	}
+
+	.shool,
+	.skills,
+	.contributions {
+		vertical-align: top;
+		display: inline-block;
+	}
+
+	.skills{
+		min-width: 30%;
+	}
+
+	.contributions {
+		max-width: 60%;
+	}
+}
+
+
+
+
+

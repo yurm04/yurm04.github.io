@@ -1,13 +1,47 @@
 html,
-body {
+body,
+h1, h2, h3, h4, h5, h6, p {
   color: #222222;
   margin: 0; }
 
-.container {
-  padding: 0 10px; }
+h3, p {
+  font-weight: normal; }
 
 .personal-info {
   background-color: #FEFEFE; }
+  .personal-info h3 {
+    display: inline-block; }
+
+.personal-info,
+.main-content {
+  padding: 3.5em 2em; }
+  .personal-info h2,
+  .main-content h2 {
+    margin-bottom: 1.3em;
+    color: #fedc72; }
+
+.personal-info div:last-child {
+  margin-bottom: 0; }
+
+.main-content {
+  background-color: #3B3C40;
+  padding-bottom: 6em; }
+  .main-content section:not(:last-child) {
+    margin-bottom: 2em; }
+  .main-content h3, .main-content p {
+    color: #FEFEFE; }
+
+.contact,
+.profiles {
+  margin: 0 auto 4em; }
+  .contact .row,
+  .profiles .row {
+    margin-bottom: .7em; }
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5em;
+  font-size: 2.3em; }
 
 .name {
   font-family: Dosis, 'Helvetica Neueu', Helvetica, Arial, sans-serif;
@@ -17,22 +51,150 @@ body {
 h2 {
   font-family: Oswald, 'Helvetica Neueu', Helvetica, Arial, sans-serif; }
 
-h3, p, a {
-  font-family: 'Open Sans', 'Helvetica Neueu', Helvetica, Arial, sans-serif; }
+h3, p, a, footer {
+  font-family: 'Open Sans', 'Helvetica Neueu', Helvetica, Arial, sans-serif;
+  font-size: 14px; }
 
 a {
-  color: #6680D4;
   text-decoration: none;
   transition: text-decoration .2s, color .2s; }
+  .personal-info a {
+    color: #6680D4; }
+  footer a {
+    color: #E92F49; }
   a:hover {
-    color: #3e5fc9;
-    text-decoration: underline; }
+    text-decoration: underline;
+    cursor: pointer; }
+    .personal-info a:hover {
+      color: #3e5fc9; }
+    footer a:hover {
+      color: #cf1630; }
 
-.row h3, .row p {
+.row h3 {
+  margin-bottom: 1em; }
+
+.contact h3, .contact p {
   display: inline-block; }
 
-.contact h3,
-.profiles h3 {
-  min-width: 100px; }
+.experience .duration,
+.experience .title,
+.experience p {
+  font-weight: normal; }
+
+.contact,
+.profiles {
+  width: 230px; }
+  .contact h3,
+  .profiles h3 {
+    min-width: 100px; }
+
+.experience .item:not(:last-child) {
+  margin-bottom: 2.5em; }
+
+.company,
+.degree,
+.row h3,
+.contribution h3 {
+  font-weight: 700; }
+
+.school:not(:last-child) {
+  margin-bottom: 2.3em; }
+.school h3 {
+  margin-bottom: .6em; }
+
+.delim {
+  margin-right: .5em;
+  margin-left: .5em; }
+
+.duration,
+.concentration {
+  font-style: italic; }
+
+.skill:not(:last-child) {
+  margin-bottom: 1em; }
+
+.contribution:not(:last-child) {
+  margin-bottom: 1.8em; }
+.contribution h3 {
+  margin-bottom: 1em; }
+
+.duration,
+.experience p,
+.insitution,
+.contribution p {
+  color: #D7D7D7; }
+
+body {
+  background-color: #3B3C40; }
+
+footer {
+  background-color: #87bcf3;
+  padding: .8em;
+  font-size: .7em;
+  text-align: center; }
+
+@media only screen and (min-width: 768px) {
+  .personal-info,
+  .main-content {
+    padding-left: 5.5em;
+    padding-right: 5.5em; }
+
+  .contact,
+  .profiles {
+    display: inline-block; }
+
+  .profiles {
+    float: right; } }
+@media only screen and (min-width: 1024px) {
+  .container {
+    display: flex; }
+
+  .personal-info,
+  .main-content {
+    padding-left: 3em;
+    padding-right: 3em; }
+
+  h1 {
+    margin-bottom: 2.5em; }
+
+  .contact,
+  .profiles {
+    display: block;
+    margin-bottom: 10em; }
+
+  .item .row h3,
+  .item .row p {
+    display: inline-block; }
+  .item .row .company,
+  .item .row .duration {
+    min-width: 30%; }
+  .item .row .title {
+    font-weight: 600; }
+  .item .row .duration {
+    vertical-align: top; }
+  .item .row p {
+    max-width: 69%; }
+
+  .school,
+  .skills,
+  .contributions {
+    vertical-align: top;
+    display: inline-block; }
+
+  .school:first-of-type {
+    min-width: 50%;
+    max-width: 50%; }
+
+  .shool,
+  .skills,
+  .contributions {
+    vertical-align: top;
+    display: inline-block; }
+
+  .skills {
+    min-width: 30%; }
+
+  .contributions {
+    max-width: 60%; } }
 
 /*# sourceMappingURL=style.css.map */
