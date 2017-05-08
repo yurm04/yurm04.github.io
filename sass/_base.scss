@@ -34,6 +34,11 @@ h3, p {
 	}
 }
 
+header img {
+	min-width: 100px;
+	border-radius: 3px;
+}
+
 .main-content {
 	background-color: $color--tuna;
 	padding-bottom: 6em;
@@ -75,19 +80,32 @@ h2 {
 
 h3, p, a, footer {
 	font-family: 'Open Sans', 'Helvetica Neueu', Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 1rem;
+}
+
+h3 small {
+	margin-left: 1em;
+	font-size: .8rem;
+	font-variant: small-caps;
+	color: $color--alto;
 }
 
 a {
 	text-decoration: none;
 	transition: text-decoration .2s,
 				color .2s;
+
 	.personal-info & {
 		color: $color--danube;
 	}
 
+	.contribution & {
+		color: $color--aquamarine;
+	}
+
 	footer & {
 		color: $color--amaranth;
+		font-size: .75rem;
 	}
 
 	&:hover {
@@ -106,12 +124,18 @@ a {
 }
 
 .row {
-	h3 {
-		margin-bottom: 1em;
+	img {
+		width: 22px;
+		margin-right: 10px;
+	}
+
+	p, img {
+		vertical-align: middle;
 	}
 }
 
 .contact {
+	max-width: 162px;
 	h3, p {
 		display: inline-block;
 	}
