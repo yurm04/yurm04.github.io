@@ -57,7 +57,7 @@ header img {
 	margin: 0 auto 4em;
 
 	.row {
-		margin-bottom: .7em;
+		margin-bottom: 1em;
 	}
 }
 
@@ -95,12 +95,19 @@ a {
 	transition: text-decoration .2s,
 				color .2s;
 
+	&:visited {
+		color: $color--amaranth;
+	}
+
 	.personal-info & {
 		color: $color--danube;
 	}
 
-	.contribution & {
-		color: $color--aquamarine;
+	.contribution,
+	.other {
+		& {
+			color: $color--aquamarine;
+		}
 	}
 
 	footer & {
@@ -168,8 +175,11 @@ a {
 .company,
 .degree,
 .row h3,
-.contribution h3 {
-	font-weight: 700;
+.contribution,
+.other {
+	h3 {
+		font-weight: 700;
+	}
 }
 
 .school {
@@ -196,7 +206,8 @@ a {
 	margin-bottom: 1em;
 }
 
-.contribution {
+.contribution,
+.other {
 	&:not(:last-child) {
 		margin-bottom: 1.8em;
 	}
@@ -315,6 +326,10 @@ footer {
 
 	.contributions {
 		max-width: 60%;
+	}
+
+	.other {
+		max-width: 70%;
 	}
 }
 
